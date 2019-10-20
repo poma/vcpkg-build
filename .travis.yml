@@ -17,4 +17,3 @@ script:
   - ./bootstrap-vcpkg.bat
   - ./vcpkg integrate install
   - ./vcpkg install openssl
-    
