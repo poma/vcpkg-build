@@ -16,4 +16,4 @@ script:
   - cd vcpkg
   - ./bootstrap-vcpkg.bat
   - ./vcpkg integrate install
-  - travis_wait 30 ./vcpkg install openssl
+  - travis_wait 30 ./vcpkg install libmicrohttpd
