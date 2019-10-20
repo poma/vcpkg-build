@@ -1,0 +1,20 @@
+if: tag IS blank
+language: cpp
+compiler: clang
+os: windows
+
+install:
+  - env
+  - ${CC} --version
+  - ${CC} -v
+  - ${CXX} --version
+  - ${CXX} -v
+
+script:
+  - export VCPKG_DEFAULT_TRIPLET=x64-windows
+  - git clone https://github.com/Microsoft/vcpkg.git
+  - cd vcpkg
+  - ./bootstrap-vcpkg.bat
+  - ./vcpkg integrate install
+  - ./vcpkg install openssl
+    
